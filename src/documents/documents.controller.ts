@@ -23,12 +23,12 @@ import { Roles } from 'shared/roles.decorator';
 import { Role } from 'shared/role.enum';
 
 @Controller('documents')
+@UseGuards(JwtAuthGuard, RolesGuard)
 @UseGuards()
 export class DocumentsController {
   constructor(private readonly documentsService: DocumentsService) {}
 
   @Post()
-  @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(Role.User)
   @UseInterceptors(
     FileInterceptor('file', {
@@ -53,21 +53,18 @@ export class DocumentsController {
   }
 
   @Get()
-  @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(Role.User)
   findAll(@Req() req) {
     return this.documentsService.findAll(req.user);
   }
 
   @Get('owner')
-  @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(Role.User)
   findOne(@Req() req) {
     return this.documentsService.findByOwner(req.user);
   }
 
   @Delete(':ID')
-  @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(Role.User)
   remove(@Param('ID') ID: string, @Req() req) {
     console.log(ID);

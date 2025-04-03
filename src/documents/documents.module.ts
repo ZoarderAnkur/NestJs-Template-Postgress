@@ -22,7 +22,7 @@ import { RolesGuard } from 'shared/roles.guard';
     }),
   ],
   controllers: [DocumentsController],
-  exports: [JwtAuthGuard, RolesGuard],
+  exports: [JwtAuthGuard, DocumentsService, RolesGuard],
   providers: [DocumentsService, JwtAuthGuard, RolesGuard],
 })
 export class DocumentsModule {}

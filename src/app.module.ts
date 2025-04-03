@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { databaseConfig } from 'shared/database.config';
 import { UsersModule } from './users/users.module';
 import { DocumentsModule } from './documents/documents.module';
+import { IngestionModule } from './ingestion/ingestion.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { DocumentsModule } from './documents/documents.module';
     TypeOrmModule.forRoot(databaseConfig),
     UsersModule,
     DocumentsModule,
+    IngestionModule,
   ],
 })
 export class AppModule {}
