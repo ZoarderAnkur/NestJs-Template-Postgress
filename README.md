@@ -1,12 +1,11 @@
-# NextJs-Template-Postgress
+# NestJs-Template-Postgress
 
-This project is a template for building a full-stack application using **Next.js** as the frontend framework and **NestJS** as the backend framework. The backend uses **PostgreSQL** as the database and integrates with **TypeORM** for database interactions. The project also includes authentication and role-based access control (RBAC) using **JWT**.
+This project is a template for building a backend application using **Nest.js** framework. The backend uses **PostgreSQL** as the database and integrates with **TypeORM** for database interactions. The project also includes authentication and role-based access control (RBAC) using **JWT**.
 
 ---
 
 ## Features
 
--   **Next.js** for the frontend.
 -   **NestJS** for the backend.
 -   **PostgreSQL** database with **TypeORM**.
 -   Authentication using **JWT**.
@@ -33,8 +32,8 @@ Before you begin, ensure you have the following installed on your system:
 1.  Clone the repository:
 
     ```bash
-    git clone [https://github.com/your-repo/NextJs-Template-Postgress.git](https://github.com/your-repo/NextJs-Template-Postgress.git)
-    cd NextJs-Template-Postgress
+    git clone [https://github.com/ZoarderAnkur/NestJs-Template-Postgress.git](https://github.com/ZoarderAnkur/NestJs-Template-Postgress.git)
+    cd NestJs-Template-Postgress
     ```
 
 2.  Install dependencies:
